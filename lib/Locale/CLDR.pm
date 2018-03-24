@@ -1182,6 +1182,10 @@ my $has_Word_Break_ZWJ = eval '1 !~ /\p{Word_Break=ZWJ}/';
 my $has_Word_Break_E_Base = eval '1 !~ /\p{Word_Break=E_Base}/';
 my $has_Word_Break_E_Base_GAZ = eval '1 !~ /\p{Word_Break=E_Base_GAZ}/';
 my $has_Word_Break_E_Modifier = eval '1 !~ /\p{Word_Break=E_Modifier}/';
+my $has_Line_Break_ZWJ = eval '1 !~ /\p{Line_Break=ZWJ}/';
+my $has_Line_Break_E_Base = eval '1 !~ /\p{Line_Break=E_Base}/';
+my $has_Line_Break_E_Base_GAZ = eval '1 !~ /\p{Line_Break=E_Base_GAZ}/';
+my $has_Line_Break_E_Modifier = eval '1 !~ /\p{Line_Break=E_Modifier}/';
 
 sub _fix_missing_unicode_properties {
 	my $regex = shift;
@@ -1215,7 +1219,19 @@ sub _fix_missing_unicode_properties {
 	$regex =~ s/\\(p)\{Word_Break=E_Modifier\}/\\${1}{IsCLDREmpty}/ig
 		unless $has_Word_Break_E_Modifier;
 
-		return $regex;
+	$regex =~ s/\\(p)\{Line_Break=ZWJ\}/\\${1}{IsCLDREmpty}/ig
+		unless $has_Line_Break_ZWJ;
+
+	$regex =~ s/\\(p)\{Line_Break=E_Base\}/\\${1}{IsCLDREmpty}/ig
+		unless $has_Line_Break_E_Base;
+
+	$regex =~ s/\\(p)\{Line_Break=E_Base_GAZ\}/\\${1}{IsCLDREmpty}/ig
+		unless $has_Line_Break_E_Base_GAZ;
+
+	$regex =~ s/\\(p)\{Line_Break=E_Modifier\}/\\${1}{IsCLDREmpty}/ig
+		unless $has_Line_Break_E_Modifier;
+
+	return $regex;
 }
 
 sub _build_break_rules {
