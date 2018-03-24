@@ -1197,7 +1197,7 @@ sub _fix_missing_unicode_properties {
 	$regex =~ s/\\(p)\{Grapheme_Cluster_Break=E_Base_GAZ\}/\\${1}{IsCLDREmpty}/ig
 		unless $has_Grapheme_Cluster_Break_E_Base_GAZ;
 
-	$regex =~ s/\\/\(p)\{Grapheme_Cluster_Break=E_Modifier\}/\\${1}{IsCLDREmpty}/ig
+	$regex =~ s/\\(p)\{Grapheme_Cluster_Break=E_Modifier\}/\\${1}{IsCLDREmpty}/ig
 		unless $has_Grapheme_Cluster_Break_E_Modifier;
 		
 	$regex =~ s/\\(p)\{Grapheme_Cluster_Break=ZWJ\}/\\${1}{IsCLDREmpty}/ig
