@@ -2218,7 +2218,7 @@ sub _split {
 
 	pos($string)=0;
 	# The Unicode Consortium has deprecated LB=Surrogate but the CLDR still
-	# uses it, at last in this version.
+	# uses it, at least in this version.
 	no warnings 'deprecated';
 	while (length($string) -1 != pos $string) {
 		my $rule_number = 0;
@@ -2254,7 +2254,7 @@ sub _split {
 		$sections[$count] .= '.';
 	}
 	
-	my $regex = '(' . join(')(', @sections) . ')';
+	my $regex = _fix_missing_unicode_properties('(' . join(')(', @sections) . ')');
 	$regex = qr{ \A $regex \z}msx;
 	@split = $string =~ $regex;
 
