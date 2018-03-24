@@ -1183,6 +1183,7 @@ my $has_Word_Break_E_Base = eval '1 !~ /\p{Word_Break=E_Base}/';
 my $has_Word_Break_E_Base_GAZ = eval '1 !~ /\p{Word_Break=E_Base_GAZ}/';
 my $has_Word_Break_E_Modifier = eval '1 !~ /\p{Word_Break=E_Modifier}/';
 my $has_Word_Break_Hebrew_Letter = eval '1 !~ \p{Word_Break=Hebrew_Letter}/';
+my $has_Word_Break_Single_Quote = eval '1 !~ \p{Word_Break=Single_Quote}/';
 my $has_Line_Break_ZWJ = eval '1 !~ /\p{Line_Break=ZWJ}/';
 my $has_Line_Break_E_Base = eval '1 !~ /\p{Line_Break=E_Base}/';
 my $has_Line_Break_E_Base_GAZ = eval '1 !~ /\p{Line_Break=E_Base_GAZ}/';
@@ -1222,6 +1223,9 @@ sub _fix_missing_unicode_properties {
 
 	$regex =~ s/\\(p)\{Word_Break=Hebrew_Letter\}/\\${1}{IsCLDREmpty}/ig
 		unless $has_Word_Break_Hebrew_Letter;
+
+	$regex =~ s/\\(p)\{Word_Break=Single_Quote\}/\\${1}{IsCLDREmpty}/ig
+		unless $has_Word_Break_Single_Quote;
 		
 	$regex =~ s/\\(p)\{Line_Break=ZWJ\}/\\${1}{IsCLDREmpty}/ig
 		unless $has_Line_Break_ZWJ;
