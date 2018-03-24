@@ -77,12 +77,6 @@ BEGIN {
 	}
 }
 
-# Test for missing Unicode properties
-my $has_emoji = eval '1 !~ /\p{emoji}/';
-my $has_Grapheme_Cluster_Break_ZWJ = eval '1 !~ /\p{Grapheme_Cluster_Break=ZWJ}/';
-my $has_Grapheme_Cluster_Break_E_Base = eval '1 !~ /\p{Grapheme_Cluster_Break=E_Base}/';
-my $has_Grapheme_Cluster_Break_E_Base_GAZ = eval '1 !~ /\p{Grapheme_Cluster_Break=E_Base_GAZ}/';
-
 =head1 ATTRIBUTES
 
 These can be passed into the constructor and all are optional.
@@ -1178,6 +1172,14 @@ sub IsCLDREmpty {
 	return '';
 }
 
+# Test for missing Unicode properties
+my $has_emoji = eval '1 !~ /\p{emoji}/';
+my $has_Grapheme_Cluster_Break_ZWJ = eval '1 !~ /\p{Grapheme_Cluster_Break=ZWJ}/';
+my $has_Grapheme_Cluster_Break_E_Base = eval '1 !~ /\p{Grapheme_Cluster_Break=E_Base}/';
+my $has_Grapheme_Cluster_Break_E_Base_GAZ = eval '1 !~ /\p{Grapheme_Cluster_Break=E_Base_GAZ}/';
+my $has_Grapheme_Cluster_Break_E_Modifier = eval '1 !~ /\p{Grapheme_Cluster_Break=E_Modifier}/';
+my $has_Word_Break_ZWJ = eval '1 !~ /\p{Word_Break=ZWJ}/';
+
 sub _fix_missing_unicode_properties {
 	my $regex = shift;
 	
@@ -1194,7 +1196,13 @@ sub _fix_missing_unicode_properties {
 	
 	$regex =~ s/\\(p)\{Grapheme_Cluster_Break=E_Base_GAZ\}/\\${1}{IsCLDREmpty}/ig
 		unless $has_Grapheme_Cluster_Break_E_Base_GAZ;
+
+	$regex =~ s\\/\(p)\{Grapheme_Cluster_Break=E_Modifier\}/\\${1}{IsCLDREmpty}/ig
+		unless $has_Grapheme_Cluster_Break_E_Modifier;
 		
+	$regex =~ s/\\(p)\{Grapheme_Cluster_Break=ZWJ\}/\\${1}{IsCLDREmpty}/ig
+		unless $has_Grapheme_Cluster_Break_ZWJ;
+
 	return $regex;
 }
 
