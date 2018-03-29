@@ -23,4 +23,8 @@ before_install:
     - "cpanm ok"
     - "cpanm Test::Exception"
     - "cpanm Test::More"
-script: test_all.t
+    - "cpanm TAP::Parser::Aggregator"
+    - "cpanm TAP::Harness"
+    - "cpanm File::Spec"
+    - "cpanm FindBin"
+script: perl test_all.t
