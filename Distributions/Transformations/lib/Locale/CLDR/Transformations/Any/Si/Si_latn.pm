@@ -1,0 +1,667 @@
+package Locale::CLDR::Transformations::Any::Si::Si_latn;
+# This file auto generated from Data/common/transforms/si-si_Latn.xml
+#	on Thu  8 Mar  9:38:15 am GMT
+
+use strict;
+use warnings;
+use version;
+
+our $VERSION = version->declare('v0.32.0');
+
+use v5.10.1;
+use mro 'c3';
+use utf8;
+use if $^V ge v5.12.0, feature => 'unicode_strings';
+use Types::Standard qw( Str Int HashRef ArrayRef CodeRef RegexpRef );
+use Moo;
+
+BEGIN {
+	die "Transliteration requires Perl 5.18 or above"
+		unless $^V ge v5.18.0;
+}
+
+no warnings 'experimental::regex_sets';
+has 'transforms' => (
+	is => 'ro',
+	isa => ArrayRef,
+	init_arg => undef,
+	default => sub { [
+		qr/(?^umi:\G(?:[\p{Sinh}]|[‌‍]))/,
+		{
+			type => 'transform',
+			data => [
+				{
+					from => q(Any),
+					to => q(NFKC),
+				},
+			],
+		},
+		{
+			type => 'conversion',
+			data => [
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(‌),
+					result  => q(),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(‍),
+					result  => q(),
+					revisit => 0,
+				},
+			],
+		},
+		{
+			type => 'transform',
+			data => [
+				{
+					from => q(Any),
+					to => q(Null),
+				},
+			],
+		},
+		{
+			type => 'conversion',
+			data => [
+				{
+					before  => q(),
+					after   => q([^්-ෟ]),
+					replace => q(([ක-ෆ])),
+					result  => q($1a),
+					revisit => 0,
+				},
+			],
+		},
+		{
+			type => 'transform',
+			data => [
+				{
+					from => q(Any),
+					to => q(Null),
+				},
+			],
+		},
+		{
+			type => 'conversion',
+			data => [
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ක),
+					result  => q(k),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ට),
+					result  => q(ṭ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ත),
+					result  => q(t),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ප),
+					result  => q(p),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ග),
+					result  => q(g),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඩ),
+					result  => q(ḍ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ද),
+					result  => q(d),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(බ),
+					result  => q(b),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q([Zz]ස),
+					result  => q(z),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ස),
+					result  => q(s),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ච),
+					result  => q(c),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ම),
+					result  => q(m),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ල),
+					result  => q(l),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ව),
+					result  => q(v),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ණ),
+					result  => q(ṇ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(හ),
+					result  => q(h),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ජ),
+					result  => q(j),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(න),
+					result  => q(n),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ර),
+					result  => q(r),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ය),
+					result  => q(y),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ළ),
+					result  => q(ḷ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(අ),
+					result  => q(a),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(එ),
+					result  => q(e),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඉ),
+					result  => q(i),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඔ),
+					result  => q(o),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(උ),
+					result  => q(u),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඇ),
+					result  => q(æ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෙ),
+					result  => q(e),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ි),
+					result  => q(i),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ො),
+					result  => q(o),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ු),
+					result  => q(u),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ැ),
+					result  => q(æ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ආ),
+					result  => q(ā),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඒ),
+					result  => q(ē),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඊ),
+					result  => q(ī),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඕ),
+					result  => q(ō),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඌ),
+					result  => q(ū),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඈ),
+					result  => q(ǣ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ා),
+					result  => q(ā),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ේ),
+					result  => q(ē),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ී),
+					result  => q(ī),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෝ),
+					result  => q(ō),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ූ),
+					result  => q(ū),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෑ),
+					result  => q(ǣ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඟ),
+					result  => q(n̆g),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඬ),
+					result  => q(n̆ḍ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඳ),
+					result  => q(n̆d),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඹ),
+					result  => q(m̆b),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඛ),
+					result  => q(kh),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඨ),
+					result  => q(ṭh),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ථ),
+					result  => q(th),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඵ),
+					result  => q(ph),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඝ),
+					result  => q(gh),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඪ),
+					result  => q(ḍh),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ධ),
+					result  => q(dh),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(භ),
+					result  => q(bh),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ශ),
+					result  => q(ś),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඡ),
+					result  => q(ch),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඤ),
+					result  => q(ñ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඞ),
+					result  => q(ṅ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඦ),
+					result  => q(n̆j),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෂ),
+					result  => q(ṣ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඣ),
+					result  => q(jh),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඥ),
+					result  => q(gn),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෆ),
+					result  => q(f),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q([Ff]ප),
+					result  => q(f),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඓ),
+					result  => q(ai),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඍ),
+					result  => q(ṛ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඏ),
+					result  => q(ḷ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෛ),
+					result  => q(ai),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෘ),
+					result  => q(ṛ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෟ),
+					result  => q(ḷ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඖ),
+					result  => q(au),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඎ),
+					result  => q(ṝ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඐ),
+					result  => q(ḹ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෞ),
+					result  => q(au),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෲ),
+					result  => q(ṝ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ෳ),
+					result  => q(ḹ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ඃ),
+					result  => q(ḥ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ං),
+					result  => q(ṁ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(්),
+					result  => q(),
+					revisit => 0,
+				},
+			]
+		},
+	] },
+);
+
+no Moo;
+
+1;
+
+# vim: tabstop=4

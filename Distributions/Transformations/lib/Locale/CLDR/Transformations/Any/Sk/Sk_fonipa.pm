@@ -1,0 +1,615 @@
+package Locale::CLDR::Transformations::Any::Sk::Sk_fonipa;
+# This file auto generated from Data/common/transforms/sk-sk_FONIPA.xml
+#	on Thu  8 Mar  9:38:15 am GMT
+
+use strict;
+use warnings;
+use version;
+
+our $VERSION = version->declare('v0.32.0');
+
+use v5.10.1;
+use mro 'c3';
+use utf8;
+use if $^V ge v5.12.0, feature => 'unicode_strings';
+use Types::Standard qw( Str Int HashRef ArrayRef CodeRef RegexpRef );
+use Moo;
+
+BEGIN {
+	die "Transliteration requires Perl 5.18 or above"
+		unless $^V ge v5.18.0;
+}
+
+no warnings 'experimental::regex_sets';
+has 'transforms' => (
+	is => 'ro',
+	isa => ArrayRef,
+	init_arg => undef,
+	default => sub { [
+		qr/(?^um:\G.)/,
+		{
+			type => 'transform',
+			data => [
+				{
+					from => q(Any),
+					to => q(NFC),
+				},
+				{
+					from => q(Any),
+					to => q(Lower),
+				},
+			],
+		},
+		{
+			type => 'conversion',
+			data => [
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ch),
+					result  => q(x),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(dž),
+					result  => q(t\u0361ʃ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(dz),
+					result  => q(t\u0361s),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(dž),
+					result  => q(d\u0361ʒ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(dz),
+					result  => q(d\u0361z),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(a),
+					result  => q(a),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(á),
+					result  => q(aː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ä),
+					result  => q(ɛ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(b),
+					result  => q(p),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(b),
+					result  => q(b),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(c),
+					result  => q(t\u0361s),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(č),
+					result  => q(t\u0361ʃ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ie]),
+					replace => q(d),
+					result  => q(ɟ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(d),
+					result  => q(t),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(d),
+					result  => q(d),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(ď),
+					result  => q(c),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ď),
+					result  => q(ɟ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(e),
+					result  => q(e),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(é),
+					result  => q(eː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(f),
+					result  => q(f),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(g),
+					result  => q(k),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(g),
+					result  => q(ɡ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(h),
+					result  => q(x),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(h),
+					result  => q(ɦ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(i),
+					result  => q(ɪ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(í),
+					result  => q(iː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(j),
+					result  => q(j),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(k),
+					result  => q(k),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ľ),
+					result  => q(ʎ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(l\'),
+					result  => q(ʎ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(l),
+					result  => q(l),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ĺ),
+					result  => q(l̩ː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([fv]),
+					replace => q(m),
+					result  => q(ɱ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(m),
+					result  => q(m),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([kg]),
+					replace => q(n),
+					result  => q(ŋ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ie]),
+					replace => q(n),
+					result  => q(ɲ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(n),
+					result  => q(n),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ň),
+					result  => q(ɲ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(o),
+					result  => q(ɔ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ó),
+					result  => q(ɔː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ô),
+					result  => q(u̯o),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(p),
+					result  => q(p),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(q),
+					result  => q(kv),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(r),
+					result  => q(r),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ŕ),
+					result  => q(r̩ː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(s),
+					result  => q(s),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(š),
+					result  => q(ʃ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ie]),
+					replace => q(t),
+					result  => q(c),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(t\'),
+					result  => q(c),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ť),
+					result  => q(c),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(t),
+					result  => q(t),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(u),
+					result  => q(u),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ú),
+					result  => q(uː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(vz),
+					result  => q(fs),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(v),
+					result  => q(f),
+					revisit => 0,
+				},
+				{
+					before  => q([$]),
+					after   => q(\'[ptťkcčsš$]),
+					replace => q(v),
+					result  => q(f),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(v),
+					result  => q(v),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(w),
+					result  => q(v),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(x),
+					result  => q(ks),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(y),
+					result  => q(ɪ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ý),
+					result  => q(iː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(z),
+					result  => q(s),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(z),
+					result  => q(z),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q([ptťkcčsš$]),
+					replace => q(ž),
+					result  => q(ʃ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ž),
+					result  => q(ʒ),
+					revisit => 0,
+				},
+			],
+		},
+		{
+			type => 'transform',
+			data => [
+				{
+					from => q(Any),
+					to => q(null),
+				},
+			],
+		},
+		{
+			type => 'conversion',
+			data => [
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(bb),
+					result  => q(bː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(cc),
+					result  => q(cː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(dd),
+					result  => q(dː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ff),
+					result  => q(fː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(nn),
+					result  => q(nː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(pp),
+					result  => q(pː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(rr),
+					result  => q(rː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ss),
+					result  => q(sː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(tt),
+					result  => q(tː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(vv),
+					result  => q(vː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(zz),
+					result  => q(zː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ʃʃ),
+					result  => q(ʃː),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ʒʒ),
+					result  => q(ʒː),
+					revisit => 0,
+				},
+			]
+		},
+	] },
+);
+
+no Moo;
+
+1;
+
+# vim: tabstop=4

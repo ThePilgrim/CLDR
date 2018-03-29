@@ -23,3 +23,4 @@ before_install:
     - "cpanm ok"
     - "cpanm Test::Exception"
     - "cpanm Test::More"
+script: test_all.t

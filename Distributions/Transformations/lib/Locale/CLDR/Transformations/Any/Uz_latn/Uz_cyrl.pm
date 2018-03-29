@@ -1,0 +1,592 @@
+package Locale::CLDR::Transformations::Any::Uz_latn::Uz_cyrl;
+# This file auto generated from Data/common/transforms/uz_Cyrl-uz_Latn.xml
+#	on Thu  8 Mar  9:38:16 am GMT
+
+use strict;
+use warnings;
+use version;
+
+our $VERSION = version->declare('v0.32.0');
+
+use v5.10.1;
+use mro 'c3';
+use utf8;
+use if $^V ge v5.12.0, feature => 'unicode_strings';
+use Types::Standard qw( Str Int HashRef ArrayRef CodeRef RegexpRef );
+use Moo;
+
+BEGIN {
+	die "Transliteration requires Perl 5.18 or above"
+		unless $^V ge v5.18.0;
+}
+
+no warnings 'experimental::regex_sets';
+has 'transforms' => (
+	is => 'ro',
+	isa => ArrayRef,
+	init_arg => undef,
+	default => sub { [
+		qr/(?^um:\G.)/,
+		{
+			type => 'transform',
+			data => [
+				{
+					from => q(Any),
+					to => q(NFD),
+				},
+			],
+		},
+		{
+			type => 'conversion',
+			data => [
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Z),
+					result  => q(З),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(z),
+					result  => q(з),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(X),
+					result  => q(Х),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(x),
+					result  => q(х),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(V),
+					result  => q(В),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(v),
+					result  => q(в),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(U),
+					result  => q(У),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(u),
+					result  => q(у),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(T),
+					result  => q(Т),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(t),
+					result  => q(т),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(S),
+					result  => q(С),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(s),
+					result  => q(с),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(R),
+					result  => q(Р),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(r),
+					result  => q(р),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Q),
+					result  => q(Қ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(q),
+					result  => q(қ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(P),
+					result  => q(П),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(p),
+					result  => q(п),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(O),
+					result  => q(О),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(o),
+					result  => q(о),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(N),
+					result  => q(Н),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(n),
+					result  => q(н),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(M),
+					result  => q(М),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(m),
+					result  => q(м),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(L),
+					result  => q(Л),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(l),
+					result  => q(л),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(K),
+					result  => q(К),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(k),
+					result  => q(к),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(J),
+					result  => q(Ж),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(j),
+					result  => q(ж),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(I),
+					result  => q(И),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(i),
+					result  => q(и),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Y),
+					result  => q(И\u0306),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(y),
+					result  => q(и\u0306),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(H),
+					result  => q(Ҳ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(h),
+					result  => q(ҳ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(G),
+					result  => q(Г),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(g),
+					result  => q(г),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(F),
+					result  => q(Ф),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(f),
+					result  => q(ф),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(E),
+					result  => q(Э),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(e),
+					result  => q(э),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(D),
+					result  => q(Д),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(d),
+					result  => q(д),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(B),
+					result  => q(Б),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(b),
+					result  => q(б),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(A),
+					result  => q(А),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(a),
+					result  => q(а),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(TS),
+					result  => q(Ц),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Ts),
+					result  => q(Ц),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ts),
+					result  => q(ц),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(YA),
+					result  => q(Я),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Ya),
+					result  => q(Я),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ya),
+					result  => q(я),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(YU),
+					result  => q(Ю),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Yu),
+					result  => q(Ю),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(yu),
+					result  => q(ю),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(YE),
+					result  => q(Е),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Ye),
+					result  => q(Е),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ye),
+					result  => q(е),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(YO),
+					result  => q(Е\u0308),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Yo),
+					result  => q(Е\u0308),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(yo),
+					result  => q(е\u0308),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ʼ),
+					result  => q(Ъ),
+					revisit => 0,
+				},
+				{
+					before  => q((?:(?=[\p{Ll}])(?:(?=[\p{L}])[\p{sc = Latn}\p{sc = Cyrl}]))),
+					after   => q(),
+					replace => q(ʼ),
+					result  => q(ъ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q((?:(?=[\p{Ll}])(?:(?=[\p{L}])[\p{sc = Latn}\p{sc = Cyrl}]))),
+					replace => q(ʼ),
+					result  => q(ъ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(CH),
+					result  => q(Ч),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Ch),
+					result  => q(Ч),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(ch),
+					result  => q(ч),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(SH),
+					result  => q(Ш),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Sh),
+					result  => q(Ш),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(sh),
+					result  => q(ш),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Gʻ),
+					result  => q(Ғ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(gʻ),
+					result  => q(ғ),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(Oʻ),
+					result  => q(У\u0306),
+					revisit => 0,
+				},
+				{
+					before  => q(),
+					after   => q(),
+					replace => q(oʻ),
+					result  => q(у\u0306),
+					revisit => 0,
+				},
+			],
+		},
+		{
+			type => 'transform',
+			data => [
+				{
+					from => q(Any),
+					to => q(NFC),
+				},
+			]
+		},
+	] },
+);
+
+no Moo;
+
+1;
+
+# vim: tabstop=4
